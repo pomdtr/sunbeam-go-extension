@@ -4,3 +4,5 @@ github.com/pomdtr/sunbeam v1.0.0-rc33 h1:m+0pibPBD0z5UJXK54OlTAxUJ7cF4XND/YkXNg+
 github.com/pomdtr/sunbeam v1.0.0-rc33/go.mod h1:vsVSnv5RLF46A/7suj8TrBGP8UQYxIsLc0Hew4xCrw8=
 github.com/pomdtr/sunbeam v1.0.0-rc34 h1:xO2q7eLNoG9rSOQ/EKFQmnrZHb+Y3d3VQrY4LgtdVwI=
 github.com/pomdtr/sunbeam v1.0.0-rc34/go.mod h1:vsVSnv5RLF46A/7suj8TrBGP8UQYxIsLc0Hew4xCrw8=
+github.com/pomdtr/sunbeam v1.0.0-rc35.0.20231006214827-9a9daef7d402 h1:snBEDGaICCjyhSs2MBPZBy5cmUcetOzz8vt4Ro1Yohs=
+github.com/pomdtr/sunbeam v1.0.0-rc35.0.20231006214827-9a9daef7d402/go.mod h1:sHOTUl4pgIiAeCJUfmpoBSJia3X6lvZezG3VmCevmP4=

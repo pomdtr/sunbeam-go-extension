@@ -55,8 +55,8 @@ func main() {
 		}
 
 		page := types.Detail{
-			Title: "Hello",
-			Text:  fmt.Sprintf("Hello, %s!", params.Name),
+			Title:    "Hello",
+			Markdown: fmt.Sprintf("> Hello, %s!", params.Name),
 			Actions: []types.Action{
 				{
 					Title: "Copy Text",

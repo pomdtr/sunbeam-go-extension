@@ -6,5 +6,5 @@ toolchain go1.21.1
 
 require (
 	github.com/mitchellh/mapstructure v1.5.0
-	github.com/pomdtr/sunbeam v1.0.0-rc34
+	github.com/pomdtr/sunbeam v1.0.0-rc35.0.20231006214827-9a9daef7d402
 )
