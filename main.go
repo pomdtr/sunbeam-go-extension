@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"strings"
 
 	"github.com/mitchellh/mapstructure"
 	"github.com/pomdtr/sunbeam/pkg/types"
@@ -13,8 +12,7 @@ import (
 func main() {
 	encoder := json.NewEncoder(os.Stdout)
 	encoder.SetIndent("", "  ")
-
-	if len(os.Args) == 1 {
+	if len(os.Args) > 1 && os.Args[1] == "manifest" {
 		encoder.Encode(types.Manifest{
 			Title: "Sunbeam",
 			Commands: []types.CommandSpec{
@@ -36,7 +34,7 @@ func main() {
 	}
 
 	var input types.CommandInput
-	if err := json.NewDecoder(strings.NewReader(os.Args[1])).Decode(&input); err != nil {
+	if err := json.NewDecoder(os.Stdin).Decode(&input); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
