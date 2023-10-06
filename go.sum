@@ -1,0 +1,6 @@
+github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyuac5Z2hdY=
+github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
+github.com/pomdtr/sunbeam v1.0.0-rc33 h1:m+0pibPBD0z5UJXK54OlTAxUJ7cF4XND/YkXNg+qAcg=
+github.com/pomdtr/sunbeam v1.0.0-rc33/go.mod h1:vsVSnv5RLF46A/7suj8TrBGP8UQYxIsLc0Hew4xCrw8=
+github.com/pomdtr/sunbeam v1.0.0-rc34 h1:xO2q7eLNoG9rSOQ/EKFQmnrZHb+Y3d3VQrY4LgtdVwI=
+github.com/pomdtr/sunbeam v1.0.0-rc34/go.mod h1:vsVSnv5RLF46A/7suj8TrBGP8UQYxIsLc0Hew4xCrw8=
