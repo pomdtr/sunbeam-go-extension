@@ -5,14 +5,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mitchellh/mapstructure"
 	"github.com/pomdtr/sunbeam/pkg/types"
 )
 
 func main() {
 	encoder := json.NewEncoder(os.Stdout)
 	encoder.SetIndent("", "  ")
-	if len(os.Args) > 1 && os.Args[1] == "manifest" {
+	if len(os.Args) == 1 {
 		encoder.Encode(types.Manifest{
 			Title: "Sunbeam",
 			Commands: []types.CommandSpec{
@@ -33,36 +32,33 @@ func main() {
 		os.Exit(0)
 	}
 
-	var input types.CommandInput
-	if err := json.NewDecoder(os.Stdin).Decode(&input); err != nil {
-		fmt.Fprintln(os.Stderr, err)
-		os.Exit(1)
-	}
-
-	switch input.Command {
+	switch os.Args[1] {
 	case "hello":
-		var params struct {
-			Name string
+		var input struct {
+			Params struct {
+				Name string
+			}
 		}
 
-		if err := mapstructure.Decode(input.Params, &params); err != nil {
+		if err := json.NewDecoder(os.Stdin).Decode(&input); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
 
-		if params.Name == "" {
-			params.Name = "World"
+		name := input.Params.Name
+		if name == "" {
+			name = "World"
 		}
 
 		page := types.Detail{
 			Title:    "Hello",
-			Markdown: fmt.Sprintf("> Hello, %s!", params.Name),
+			Markdown: fmt.Sprintf("> Hello, %s!", name),
 			Actions: []types.Action{
 				{
 					Title: "Copy Text",
 					OnAction: types.Command{
 						Type: types.CommandTypeCopy,
-						Text: fmt.Sprintf("Hello, %s!", params.Name),
+						Text: fmt.Sprintf("Hello, %s!", name),
 						Exit: true,
 					},
 				},
