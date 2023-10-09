@@ -21,9 +21,8 @@ func main() {
 					Mode:  types.CommandModeView,
 					Params: []types.Param{
 						{
-							Name:     "name",
-							Type:     types.ParamTypeString,
-							Optional: true,
+							Name: "name",
+							Type: types.ParamTypeString,
 						},
 					},
 				},
